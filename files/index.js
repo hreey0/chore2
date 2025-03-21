@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const { exec, execSync } = require('child_process');
 const port = process.env.SERVER_PORT || process.env.PORT || 3000;        
-const UUID = process.env.UUID || '6a80a9d6-c6a4-449e-a1db-a672dfe5b469'; //若需要改UUID，需要在config.json里改为一致
+const UUID = process.env.UUID || '6a80a9d6-c5a4-449e-a1db-a672dfe5b469'; //若需要改UUID，需要在config.json里改为一致
 const NEZHA_SERVER = process.env.NEZHA_SERVER || '';     
 const NEZHA_PORT = process.env.NEZHA_PORT || '';                     // 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一开启tls
 const NEZHA_KEY = process.env.NEZHA_KEY || '';   // 没用哪吒，把这个参数空着
-const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'c3.most2026.ip-ddns.com';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
-const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiYjRmMDg4MjljYjU5MjY5NDAwM2UzNzAyZjhiOWVjYmQiLCJ0IjoiNzZjYjllYzYtZjQ2YS00NzZjLTgwMjctMTljZTc1ZjkyZTRhIiwicyI6Ik0yRXlaR0V6WW1JdE1UVm1aQzAwWkdGaExUZzFNREV0TVRCaE1XUmpPR1JqWXpJMSJ9';
+const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'c5.lion66vegetarian.eu.org';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
+const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiYjRmMDg4MjljYjU5MjY5NDAwM2UzNzAyZjhiOWVjYmQiLCJ0IjoiMGZjZDY1YzEtNTZhOS00NGY3LTkzODYtMWU5MDA3YWVhZjI0IiwicyI6IlkyUXhNRGhpWlRJdE9UYzFaaTAwWkdGaUxUazJOall0TjJFME9EZ3dNRGMzWlRnNCJ9';
 const CFIP = process.env.CFIP || 'www.visa.com.tw';
 const NAME = process.env.NAME || 'Choreo';
 
